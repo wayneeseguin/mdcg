@@ -1,0 +1,285 @@
+! To save config When Done:
+! copy running-config startup-config
+!
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+service password-encryption
+service sequence-numbers
+!
+hostname os0-sw0
+!
+logging count
+logging buffered 64000 informational
+logging rate-limit console 100 except errors
+logging console informational
+enable secret 3Point14159
+!
+username root privilege 15 secret 3Point14159
+!
+no aaa new-model
+! error here vvv
+aaa session-id common
+ip subnet-zero
+ip domain-name overnothing.com
+ip name-server 208.67.222.222
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+!
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh version 2
+!
+vlan 100
+name Public
+vlan 101
+name Management
+vlan 102
+name Storage
+vlan 103
+name Admin
+vlan 104
+name IMPI
+!
+interface GigabitEthernet0/1
+ description os0-admin0-eth0 (eth0: Fuel 0, Controller 0, Cinder 0)
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+! Do not map external IP through to Fuel Master 'public' IP.
+interface GigabitEthernet0/2
+ description os0-admin0-eth1 (eth1: Fuel 0, Controller 0, Cinder 0)
+ switchport mode access
+ switchport access vlan 100
+ spanning-tree portfast
+!
+interface GigabitEthernet0/3
+ description os0-admin1-eth0 (eth0: Fuel 1, Controller 1, Cinder 1)
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+! ERROR: at encapsulation...?
+interface GigabitEthernet0/4
+ description os0-admin1-eth1 (eth1: Fuel 1, Controller 1, Cinder 1)
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+! Currently Free
+interface GigabitEthernet0/5
+ description os0-admin2-eth0 (eth0: Fuel 2, Controller 2, Cinder 2)
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+! Currently Free
+interface GigabitEthernet0/6
+ description os0-admin2-eth1 (eth1: Fuel 2, Controller 2, Cinder 2)
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/7
+ description os0-node0-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/8
+ description os0-node0-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/9
+ description os0-node1-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/10
+ description os0-node1-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/11
+ description os0-node2-eth0
+ switchport access vlan 103
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet0/12
+ description os0-node2-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/13
+ description os0-node3-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/14
+ description os0-node3-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/15
+ description os0-node4-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/16
+ description os0-node4-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/17
+ description os0-node5-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/18
+ description os0-node5-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/19
+ description os0-node6-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/20
+ description os0-node6-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/21
+ description os0-node7-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/22
+ description os0-node7-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/23
+ description os0-node8-eth0
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/24
+ description os0-node8-eth1
+ switchport mode trunk
+ switchport trunk native vlan 100
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet0/33
+ description os0-admin1-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/34
+ description os0-admin1-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/35
+ description os0-node0-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/36
+ description os0-node1-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/37
+ description os0-node2-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/38
+ description os0-node3-impi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/39
+ description os0-node4-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/40
+ description os0-node5-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/41
+ description os0-node6-ipmi
+ switchport mode access
+ switchport access vlan 103
+ spanning-tree portfast
+!
+interface GigabitEthernet0/43
+ description os0-gw0
+ switchport mode access
+ switchport access vlan 100
+! 10.20.0.254 // 255.255.0.0
+interface GigabitEthernet0/44
+ description mp64 configuraiton, IPMI Network
+ switchport mode trunk
+ switchport trunk native vlan 104
+ switchport access vlan 104
+ spanning-tree portfast trunk
+!
+interface Vlan104
+ ip address 10.20.0.254 255.255.0.0
+!cluster enable IPMI ???
+interface Vlan100
+ ip address 172.16.1.254 255.255.255.0
+ ip address 172.16.0.254 255.255.255.0 secondary
+ no shutdown
+!
+ip route 0.0.0.0 0.0.0.0 172.16.1.1
+!
+ip classless
+no ip http server
+no ip http secure-server
+!
+line con 0
+session-timeout 15
+privilege level 15
+login local
+password 3Point14159
+!
+line vty 0 15
+session-timeout 15
+login local
+password 3Point14159
+!
+ntp server 0.us.pool.ntp.org prefer
+ntp server 1.us.pool.ntp.org
+ntp server 2.us.pool.ntp.org
+ntp server 3.us.pool.ntp.org
+
