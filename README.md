@@ -1,42 +1,4 @@
-# 
+# Micro Data Center G Repository
 
-## IP Upstream
-MTXSwitchPort= F3
-NETWORK=24.75.45.32/27
-GATEWAY=24.75.45.33
-NETMASK=255.255.255.224 
+This repository is for configuration related to micro data center g.
 
-## IP Address Range
-IP ADDRESS RANGE: 24.75.45.33-24.75.45.62
-
-## IP Address Assignment
-24.75.45.33 Gateway + VPN
-24.75.45.34 mtx-router-1
-24.75.45.35 mtx-router-2
-24.75.45.36 Cloud Foundry
-24.75.45.37 
-24.75.45.38 
-24.75.45.39 
-24.75.45.40 
-24.75.45.41 
-24.75.45.42 
-24.75.45.43
-24.75.45.44
-24.75.45.45
-24.75.45.46
-24.75.45.47
-24.75.45.48
-24.75.45.49
-24.75.45.50 
-24.75.45.51
-24.75.45.52
-24.75.45.53
-24.75.45.54
-24.75.45.55
-24.75.45.56
-24.75.45.57
-24.75.45.58
-24.75.45.59
-24.75.45.60
-24.75.45.61
-24.75.45.62 
