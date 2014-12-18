@@ -1,0 +1,74 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 8 (0x8)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=NY, L=Buffalo, O=Division By Zero, OU=Production, CN=MTX-ROUTER-1/name=Wayne E. Seguin/emailAddress=mail@host.domain
+        Validity
+            Not Before: Feb  3 16:59:29 2014 GMT
+            Not After : Feb  1 16:59:29 2024 GMT
+        Subject: C=US, ST=CA, L=Palo Alto, O=Stark And Wayne, OU=Production, CN=MTX-ROUTER-1/name=Reuben Koster/emailAddress=mail@host.domain
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c8:a4:88:c7:74:f9:fc:7e:05:eb:64:1f:ec:47:
+                    d6:f8:80:55:a5:44:79:c8:48:fe:2c:7a:05:1b:30:
+                    2e:ae:5d:0c:a5:c1:67:16:c1:4e:a4:ca:e2:b0:75:
+                    ef:a7:79:70:ec:21:80:a2:f1:7e:df:ba:c8:88:0b:
+                    dd:32:37:cd:d8:e9:c9:6b:03:3f:67:4f:a5:74:3d:
+                    ef:4e:61:4c:9d:6f:ec:48:8b:bb:bb:0a:d9:09:52:
+                    1d:82:61:c6:6a:14:3c:6d:e6:35:8e:db:99:30:0e:
+                    a3:82:b2:6e:16:45:02:93:58:db:5a:0b:41:06:07:
+                    3d:73:c8:4f:41:f5:d4:94:c3
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                C2:A6:A0:89:B0:21:F9:93:34:AE:32:D1:2A:88:A1:2F:13:0E:A4:79
+            X509v3 Authority Key Identifier: 
+                keyid:EA:71:2C:74:7E:4F:91:A1:2C:96:EC:51:6F:BE:3D:F3:6F:B5:81:7C
+                DirName:/C=US/ST=NY/L=Buffalo/O=Division By Zero/OU=Production/CN=MTX-ROUTER-1/name=Wayne E. Seguin/emailAddress=mail@host.domain
+                serial:E4:69:08:58:0B:79:34:36
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+         a0:b1:c8:1c:cd:e5:ff:20:55:68:f9:53:c6:4d:d3:9f:25:31:
+         cd:bc:67:2f:c9:38:95:b0:f2:bf:c8:4b:92:d8:d4:5e:0c:78:
+         6d:08:c8:b0:c2:41:37:aa:c9:cf:fe:4c:6f:78:7a:c8:dc:f4:
+         93:d3:df:98:a2:55:1b:ca:24:51:da:56:e7:c1:bf:b4:fb:7a:
+         4c:20:84:cf:c2:3a:a0:db:8b:8c:cb:3a:cc:2c:18:2a:d1:aa:
+         d3:b5:f4:22:5a:5b:3a:97:c3:40:37:b4:b3:3f:45:78:9f:63:
+         65:f2:c9:ec:af:ba:44:3d:43:8d:48:6a:42:28:33:f8:13:64:
+         be:2e
+-----BEGIN CERTIFICATE-----
+MIIEOjCCA6OgAwIBAgIBCDANBgkqhkiG9w0BAQUFADCBrjELMAkGA1UEBhMCVVMx
+CzAJBgNVBAgTAk5ZMRAwDgYDVQQHEwdCdWZmYWxvMRkwFwYDVQQKExBEaXZpc2lv
+biBCeSBaZXJvMRMwEQYDVQQLEwpQcm9kdWN0aW9uMRUwEwYDVQQDEwxNVFgtUk9V
+VEVSLTExGDAWBgNVBCkTD1dheW5lIEUuIFNlZ3VpbjEfMB0GCSqGSIb3DQEJARYQ
+bWFpbEBob3N0LmRvbWFpbjAeFw0xNDAyMDMxNjU5MjlaFw0yNDAyMDExNjU5Mjla
+MIGtMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExEjAQBgNVBAcTCVBhbG8gQWx0
+bzEYMBYGA1UEChMPU3RhcmsgQW5kIFdheW5lMRMwEQYDVQQLEwpQcm9kdWN0aW9u
+MRUwEwYDVQQDEwxNVFgtUk9VVEVSLTExFjAUBgNVBCkTDVJldWJlbiBLb3N0ZXIx
+HzAdBgkqhkiG9w0BCQEWEG1haWxAaG9zdC5kb21haW4wgZ8wDQYJKoZIhvcNAQEB
+BQADgY0AMIGJAoGBAMikiMd0+fx+BetkH+xH1viAVaVEechI/ix6BRswLq5dDKXB
+ZxbBTqTK4rB176d5cOwhgKLxft+6yIgL3TI3zdjpyWsDP2dPpXQ9705hTJ1v7EiL
+u7sK2QlSHYJhxmoUPG3mNY7bmTAOo4KybhZFApNY21oLQQYHPXPIT0H11JTDAgMB
+AAGjggFlMIIBYTAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFMKmoImwIfmTNK4y0SqIoS8T
+DqR5MIHjBgNVHSMEgdswgdiAFOpxLHR+T5GhLJbsUW++PfNvtYF8oYG0pIGxMIGu
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTlkxEDAOBgNVBAcTB0J1ZmZhbG8xGTAX
+BgNVBAoTEERpdmlzaW9uIEJ5IFplcm8xEzARBgNVBAsTClByb2R1Y3Rpb24xFTAT
+BgNVBAMTDE1UWC1ST1VURVItMTEYMBYGA1UEKRMPV2F5bmUgRS4gU2VndWluMR8w
+HQYJKoZIhvcNAQkBFhBtYWlsQGhvc3QuZG9tYWluggkA5GkIWAt5NDYwEwYDVR0l
+BAwwCgYIKwYBBQUHAwIwCwYDVR0PBAQDAgeAMA0GCSqGSIb3DQEBBQUAA4GBAKCx
+yBzN5f8gVWj5U8ZN058lMc28Zy/JOJWw8r/IS5LY1F4MeG0IyLDCQTeqyc/+TG94
+esjc9JPT35iiVRvKJFHaVufBv7T7ekwghM/COqDbi4zLOswsGCrRqtO19CJaWzqX
+w0A3tLM/RXifY2XyyeyvukQ9Q41IakIoM/gTZL4u
+-----END CERTIFICATE-----

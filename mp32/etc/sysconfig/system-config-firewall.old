@@ -1,0 +1,7 @@
+# Configuration file for system-config-firewall
+
+--enabled
+--port=5432:tcp
+--service=https
+--service=ssh
+--service=http

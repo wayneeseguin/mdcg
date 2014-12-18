@@ -1,0 +1,4 @@
+DEVICE="em4"
+USERCTL=no
+ONBOOT=no
+BOOTPROTO=none

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -x
+for host in mp32 mp64 snapshot
+do
+	for dir in nginx sysconfig postfix openvpn ssh
+	do 
+		mkdir -p ${PWD}/${host}/etc/${dir}
+		rsync -a root@${host}:/etc/${dir}/ ${PWD}/${host}/etc/${dir}/
+	done
+done

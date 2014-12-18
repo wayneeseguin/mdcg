@@ -1,0 +1,4 @@
+DEVICE="em2"
+USERCTL=no
+ONBOOT=no
+BOOTPROTO=none
