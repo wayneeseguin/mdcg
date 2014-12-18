@@ -6,6 +6,8 @@ do
 	for dir in nginx sysconfig postfix openvpn ssh
 	do 
 		mkdir -p ${PWD}/${host}/etc/${dir}
-		rsync -a root@${host}:/etc/${dir}/ ${PWD}/${host}/etc/${dir}/
+		rsync -a root@${host}:/etc/${dir}/ ${PWD}/${host}/etc/${dir}/ &
 	done
+	scp root@${host}:/etc/rc.local ${PWD}/${host}/etc/rc.local &
 done
+wait

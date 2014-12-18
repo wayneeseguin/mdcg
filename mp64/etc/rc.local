@@ -1,0 +1,26 @@
+classc=24.75.45
+for classd in 69 71 72 73 74 75 76 
+do ip addr add dev eth0 ${classc}.${classd}/27
+done
+
+chown -R redis /var/log/redis
+chown -R redis /var/db/redis
+/bin/su redis '/bin/sm redis start'
+
+for service in nginx postgresql
+do /opt/sm/bin/sm ${service} start
+done
+
+# gemstore
+/bin/su gemstore -c '/home/gemstore/bin/thin_ctl restart'
+
+# projects
+/bin/su projects -c '. /home/projects/.env;thin restart --address 0.0.0.0 --environment ${environment}   --chdir "$HOME/active/${project}" --log "$HOME/shared/log/${environment}.log"   --tag ${project}:${environment} --port ${port} -s2   --pid ${HOME}/shared/run/${project}.pid'
+
+for user in wecora taper 
+do /bin/su -l ${user} -c '/bin/bash -l -c "redis-start;restart"'
+done
+
+for user in ellieandemmas linkstache rws memorygame git gitlab_ci
+do /bin/su -l ellieandemmas -c '/bin/bash -l -c "restart"'
+done
