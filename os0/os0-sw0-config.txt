@@ -240,7 +240,7 @@ interface GigabitEthernet0/41
  switchport mode access
  switchport access vlan 103
  spanning-tree portfast
-!
+! NOTE: Router eth4 is for os0 ingress @ port 43 // 10.0.20.43
 interface GigabitEthernet0/43
  description os0-gw0
  switchport mode access
@@ -251,6 +251,7 @@ interface GigabitEthernet0/44
  switchport mode trunk
  switchport trunk native vlan 104
  switchport access vlan 104
+ switchport access vlan 103
  spanning-tree portfast trunk
 !
 interface Vlan104
