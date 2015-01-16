@@ -187,11 +187,68 @@ interface GigabitEthernet0/24
  switchport trunk native vlan 100
  spanning-tree portfast trunk
 !
+interface GigabitEthernet0/25
+ description tba1-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/26
+ description snw1-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/27
+ description snw2-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/28
+ description snw3-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/29
+ description snw4-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/30
+ description snw5-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/31
+ description snw6-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
+interface GigabitEthernet0/32
+ description router1-ipmi
+ switchport access vlan 104
+ switchport mode access
+ spanning-tree portfast
+end
+!
 interface GigabitEthernet0/33
  description os0-admin1-ipmi
+ switchport access vlan 104
  switchport mode access
- switchport access vlan 103
  spanning-tree portfast
+end
 !
 interface GigabitEthernet0/34
  description os0-admin1-ipmi
@@ -243,8 +300,8 @@ interface GigabitEthernet0/41
 ! NOTE: Router eth4 is for os0 ingress @ port 43 // 10.0.20.43
 interface GigabitEthernet0/43
  description os0-gw0
- switchport mode access
  switchport access vlan 100
+ switchport mode trunk
 ! 10.20.0.254 // 255.255.0.0
 interface GigabitEthernet0/44
  description mp64 configuraiton, IPMI Network
