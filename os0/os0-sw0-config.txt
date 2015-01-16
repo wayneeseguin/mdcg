@@ -192,63 +192,54 @@ interface GigabitEthernet0/25
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/26
  description snw1-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/27
  description snw2-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/28
  description snw3-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/29
  description snw4-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/30
  description snw5-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/31
  description snw6-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/32
  description router1-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/33
  description os0-admin1-ipmi
  switchport access vlan 104
  switchport mode access
  spanning-tree portfast
-end
 !
 interface GigabitEthernet0/34
  description os0-admin1-ipmi
